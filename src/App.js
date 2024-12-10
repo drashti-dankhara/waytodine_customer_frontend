@@ -15,6 +15,7 @@ import HelpSupport from './pages/HelpSupport.js';
 import PaymentSuccess from './pages/PaymentSuccess.js';
 import OrderTracking from './pages/OrderTracking.js';
 import OrdersPage from './pages/OrdersPage.js';
+import SendInquiry from './pages/SendInquiry.js';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/payment/success/:orderId"  element={<PaymentSuccess />}  />
           <Route path="/order-tracking/:orderId" element={<OrderTracking />} />
           <Route path="/your-orders" element={<OrdersPage />} />
+          <Route path="/send-inquiry" element={<SendInquiry />} />
         </Routes>
       </div>
     </Router>

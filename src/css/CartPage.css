@@ -1,0 +1,112 @@
+.cart-page {
+    padding: 20px;
+  }
+  
+  /* Reduce the size of the image */
+/* CartPage.css */
+.cart-item-image {
+    width: 100px;  /* Set the width of the image */
+    height: 100px; /* Set the height to match for a square shape */
+    object-fit: cover; /* Ensure the image fits within the square without distortion */
+    border-radius: 10px; /* Add rounded corners */
+    border: 2px solid #f0f0f0; /* Optional: Add a light border for visual separation */
+  }
+  
+  
+  .cart-item h3 {
+    font-size: 18px; /* Smaller font size for the product title */
+    margin-bottom: 5px;
+  }
+  
+  .cart-item p {
+    font-size: 14px; /* Reduce font size for the product description */
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .cart-item-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item-quantity button {
+    padding: 5px 10px; /* Reduce padding to make buttons smaller */
+  }
+  
+  .cart-item-quantity span {
+    font-size: 14px; /* Reduce font size of the quantity number */
+    margin: 0 10px;
+  }
+  
+  .cart-item-price {
+    font-size: 16px; /* Reduce the price font size */
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  button {
+    font-size: 14px; /* Make buttons smaller */
+    padding: 5px 10px; /* Reduce padding for smaller buttons */
+  }
+  
+  .summary-item span {
+    font-size: 14px; /* Make the text in the summary smaller */
+  }
+  
+  .total-amount strong {
+    font-size: 16px; /* Slightly bigger for the total amount */
+  }
+  
+  button.place-order-btn {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Reduce button size */
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .address-list {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+}
+
+.address-item {
+    padding: 10px; /* Add padding for each address item */
+    margin-bottom: 5px; /* Space between items */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.address-item:hover {
+    background-color: #f0f0f0; /* Slight gray background on hover */
+}
+
+.address-item input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and text */
+}
+
+  
+  @media (max-width: 768px) {
+    /* For smaller screens, adjust layout accordingly */
+    .cart-item img {
+      width: 80px; /* Even smaller for mobile */
+    }
+    .cart-item h3 {
+      font-size: 16px;
+    }
+    .cart-item p {
+      font-size: 12px;
+    }
+    button {
+      font-size: 12px;
+    }
+  }
+  

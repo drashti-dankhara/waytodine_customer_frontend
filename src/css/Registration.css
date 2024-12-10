@@ -1,0 +1,56 @@
+/* Full-screen background with centered content */
+.registration-container {
+    background-image: url('https://deorwineblog.b-cdn.net/uploads/2019/11/inner-food-delivery-app.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .registration-card {
+    background-color: rgba(255, 255, 255, 0.501);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Input field styling */
+  .registration-card .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Button styling */
+  .registration-card .btn-primary {
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .registration-card .btn-primary:hover {
+    background-color: #ff4500;
+  }
+  
+  .registration-card h3 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+
+.forgot-password-link, .signup-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password-link:hover, .signup-link:hover {
+    text-decoration: underline;
+  }
+
+  

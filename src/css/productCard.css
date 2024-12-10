@@ -1,0 +1,37 @@
+.product-card {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-body {
+    padding: 10px;
+}
+
+.product-card-divider {
+    margin: 0;
+    border-color: #7E808C;
+}
+
+.product-card-name {
+    margin-bottom: 0;
+}
+
+.product-details-button {
+    border-radius: 20px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.product-image {
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-add-button {
+    margin-top: 8px;
+    width: 100%;
+}

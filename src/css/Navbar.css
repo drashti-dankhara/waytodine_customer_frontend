@@ -1,0 +1,57 @@
+/* navbar section */
+.custom-navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links {
+    display: flex;
+    /* Ensure navbar links are displayed in a row */
+  }
+  
+  .navbar-links .nav-link {
+    margin-left: 15px;
+    font-weight: 500;
+  }
+  
+  .navbar-links .fa {
+    margin-right: 5px;
+  }
+  
+  .location-dropdown {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    /* Space between logo and location */
+  }
+  
+  .navbar .badge {
+    position: relative;
+    top: 0;
+    /* Adjust position as needed */
+    background-color: red;
+    border-radius: 50%;
+    font-size: 10px;
+  }
+  
+  /* Custom styles for the dropdown toggle */
+.dropdown-toggle {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+
+.dropdown-toggle:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Optional: Add some padding for better click area */
+.dropdown-toggle {
+  padding: 0;
+  margin: 0 10px; /* Adjust as needed for spacing */
+}

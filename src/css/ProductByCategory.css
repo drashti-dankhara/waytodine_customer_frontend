@@ -1,0 +1,106 @@
+/* src/styles/IdliCategory.css */
+
+/* General styles */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Filter and Button Styles */
+  button {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+/* Card Styles */
+.restaurant-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Container to position offer-badge relative to the image */
+.image-container {
+    position: relative;
+}
+  
+  .restaurant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+/* Restaurant Image */
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Offer Badge */
+.offer-badge {
+    position: absolute;
+    bottom: 1px;  /* Align to the bottom of the image */
+    left: 1px;    /* Align to the left of the image */
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 900;    /* Make the text bold */
+    border-radius: 10px;
+    font-size: 1.2rem;   /* Bigger text size */
+    z-index: 2;          /* Ensure the badge is on top of the image */
+    text-transform: uppercase;  /* Make the text uppercase */
+}
+  
+  /* Card Body */
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .card-text span {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .card-text span:first-child {
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  /* Style for the star icon next to rating */
+.rating-star {
+    color: #28a745; /* Green color for the star */
+    margin-right: 5px; /* Space between star and rating */
+    font-size: 1.1rem; /* Adjust the size of the star */
+    vertical-align: middle; /* Align the star with text */
+    margin-top:-5px;
+}
+
+/* Style for the rating text */
+.rating-text {
+    font-weight: bold; 
+    color: #343a40; /* Dark color for rating */
+}
+
+/* FilterModal.css */
+.filter-container {
+    display: flex;
+}
+
+.filter-content {
+    padding: 20px; /* Add padding to the content area */
+}
+
+.nav-link.active {
+    font-weight: bold; /* Highlight active link */
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.nav-link {
+    cursor: pointer; /* Change cursor to pointer for links */
+}

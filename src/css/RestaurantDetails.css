@@ -1,0 +1,194 @@
+.restaurant-header {
+    border: none;
+    position: relative;
+    background: transparent;
+}
+
+.restaurant-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.restaurant-rating {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 1.2rem;
+}
+
+.star {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+}
+
+.nav-pills-custom .nav-link {
+    color: #000; /* Default black text */
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-pills-custom .nav-link.active {
+    background-color: #FFCA2C !important;; /* Yellow background for active state */
+    color: white; /* White text for active state */
+}
+
+.nav-pills-custom .nav-link:hover, 
+.nav-pills-custom .nav-link:focus {
+    background-color: #FFCA2C; /* Yellow background on hover/focus */
+    color: white; /* White text on hover/focus */
+}
+
+
+.menu-categories .nav-link {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.menu-categories .nav-link:hover, .menu-categories .nav-link:focus {
+    background-color: #FFCA2C;
+    color: white;
+}
+
+.menu-item {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px; /* Reduced margin for smaller spacing between cards */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Side by side layout */
+    min-height: 120px; /* Reduced minimum height for all cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.menu-item-content {
+    display: flex; /* Flexbox for image and text */
+    width: 100%; /* Full width */
+}
+
+.menu-item-image {
+    width: 120px; /* Adjusted width for the image */
+    height: auto; /* Maintain aspect ratio of the image */
+    max-height: 100%; /* Ensure the image does not exceed the card height */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.menu-item-details {
+    padding: 5px; /* Reduced padding for text area */
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: space-between; /* Space elements */
+    flex: 1; /* Allow to grow and fill the remaining space */
+}
+
+.menu-item-title {
+    font-weight: bold; /* Bold title */
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Adjust font size */
+}
+
+.menu-item-price {
+    font-weight: bold; /* Bold price */
+    color: #FFCA2C; /* Highlight color */
+    margin-bottom: 5px; /* Space between price and description */
+}
+
+.menu-item-description {
+    color: #6c757d; /* Darker text for description */
+    flex-grow: 1; /* Allow description to take up available space */
+    font-size: 0.9rem; /* Adjust font size for description */
+}
+
+.add-to-cart-btn {
+    margin-top: auto; /* Push button to the bottom */
+}
+
+
+/* about  */
+
+
+.about-restaurant {
+    text-align: center; /* Center align all text */
+    margin: 20px 0; /* Space above and below the section */
+}
+
+.about-text {
+    margin-bottom: 20px; /* Space below paragraph */
+    max-width: 1500px; /* Limit width for readability */
+    margin-left: auto; /* Centering */
+    margin-right: auto; /* Centering */
+}
+
+.about-details {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center align items */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.about-item {
+    margin: 10px; /* Space between cards */
+    width: 300px; /* Fixed width for each card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text inside cards */
+}
+
+.about-icon {
+    font-size: 2rem; /* Icon size */
+    color: #FFCA2C; /* Color for the icons */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.about-item h5 {
+    margin-bottom: 10px; /* Space below heading */
+    font-weight: bold; /* Bold headings */
+}
+
+/* Reviews.css */
+
+.reviews-container {
+    margin-top: 10px; /* Reduced top margin */
+}
+
+.add-review-col {
+    padding: 10px; /* Reduced padding */
+    border-right: 1px solid #ddd; /* Divider */
+}
+
+.reviews-list-col {
+    padding: 10px; /* Reduced padding */
+}
+
+.review-card {
+    margin-bottom: 10px; /* Reduced spacing between cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%; /* Ensure the card doesn't stretch too wide */
+}
+
+.review-card-body {
+    display: flex; /* Align image and content side by side */
+    align-items: center;
+    padding: 10px; /* Reduced padding */
+}
+
+.review-user-image {
+    width: 40px; /* Size of the user image */
+    height: 40px; /* Size of the user image */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.review-content {
+    flex-grow: 1; /* Take the remaining space */
+}
+
+.review-rating {
+    color: #FFD700; /* Gold color for stars */
+    margin: 2px 0; /* Reduced spacing for rating */
+}

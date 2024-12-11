@@ -56,8 +56,8 @@ const FiltersForProductSearch = ({ selectedFilter, onFilterChange, onAdditionalF
           Veg
         </Button>
         <Button
-          variant={isActive('type', 2) ? 'dark' : 'outline-secondary'}
-          onClick={() => handleFilterChange('type', 2)}
+          variant={isActive('type', 0) ? 'dark' : 'outline-secondary'}
+          onClick={() => handleFilterChange('type', 0)}
         >
           Non-Veg
         </Button>

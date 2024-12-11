@@ -148,7 +148,7 @@ const ProductCard = ({ product }) => {
                 </div>
               
                 <div style={{ fontSize: '14px', color: '#6c757d' }}>
-                    {product.rating} ⭐ | {product.restaurant.restaurantDetails.openingHoursWeekdays}
+                    {product.rating} ⭐ | {product.restaurant?.restaurantDetails?.openingHoursWeekdays || "Unavailable"}
                 </div>
             </Card.Body>
 

@@ -8,7 +8,7 @@ import RestaurantCategory from '../components/RestaurantCategory';
 import MenuItem from '../components/MenuItem';
 import AboutRestaurant from '../components/AboutRestaurant';
 import Reviews from '../components/Reviews';
-import { useParams } from 'react-router-dom'; 
+import { useParams } from 'react-router-dom';
 import { CUSTOMER_BACKEND_URL } from "../constants"; // Import the constant 
 import axios from 'axios';
 
@@ -54,14 +54,16 @@ const RestaurantDetails = () => {
                     `${CUSTOMER_BACKEND_URL}/items/get-items-restaurant/${restaurantId}`
                 );
                 if (response.data && response.data.status) {
-                    setMenuItems(response.data.data);
+                    setMenuItems(response.data.data || []); // Handle empty array
                 } else {
-                    throw new Error("Failed to fetch initial menu items");
+                    setMenuItems([]); // Set menu items as an empty array if no data
                 }
             } catch (err) {
-                setError(err.message);
+                console.error("Error fetching initial menu items:", err.message);
+                setError("An error occurred while fetching menu items."); // General error message
             }
         };
+
 
         if (!activeCategory) {
             fetchInitialMenuItems();
@@ -74,14 +76,16 @@ const RestaurantDetails = () => {
                 `${CUSTOMER_BACKEND_URL}/items/get-items-restaurant-category/${restaurantId}/${categoryId}`
             );
             if (response.data && response.data.status) {
-                setMenuItems(response.data.data);
+                setMenuItems(response.data.data || []); // Handle empty array
             } else {
-                throw new Error("Failed to fetch menu items");
+                setMenuItems([]); // No items in this category
             }
         } catch (err) {
-            setError(err.message);
+            console.error("Error fetching menu items for category:", err.message);
+            setError("An error occurred while fetching menu items."); // General error message
         }
     };
+
 
     console.log('Restaurant data in res details page :', restaurant);
 
@@ -89,7 +93,7 @@ const RestaurantDetails = () => {
         setActiveCategory(categoryId);
         fetchMenuItems(categoryId);
     };
-   
+
     const renderContent = () => {
         switch (activeTab) {
             case 'category':
@@ -99,9 +103,11 @@ const RestaurantDetails = () => {
         }
     };
 
-    
+
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
+    if (error) return <p className="error-message">{error}</p>;
+    if (menuItems.length === 0) return <p>No items are available as this is a new restaurant.</p>;
+
 
     return (
         <div className="restaurantDetails">
@@ -110,7 +116,7 @@ const RestaurantDetails = () => {
                 {/* Restaurant Header */}
                 <Row className="mt-4">
                     <Col>
-                        <RestaurantHeader restaurant={restaurant}/>
+                        <RestaurantHeader restaurant={restaurant} />
                     </Col>
                 </Row>
 
@@ -127,20 +133,28 @@ const RestaurantDetails = () => {
                             </Col>
                             <Col md={9}>
                                 <Row>
-                                    {menuItems.map((item, index) => (
-                                        <Col md={6} key={index}>
-                                            <MenuItem
-                                                itemId={item.itemId}
-                                                title={item.name}
-                                                price={item.price}
-                                                image={item.itemImage}
-                                                description={item.description}
-                                                restaurantId={restaurantId}
-                                            />
-                                        </Col>
-                                    ))}
+                                    {menuItems.length > 0 ? (
+                                        menuItems.map((item, index) => (
+                                            <Col md={6} key={index}>
+                                                <MenuItem
+                                                    itemId={item.itemId}
+                                                    title={item.name}
+                                                    price={item.price}
+                                                    image={item.itemImage}
+                                                    description={item.description}
+                                                    restaurantId={restaurantId}
+                                                />
+                                            </Col>
+                                        ))
+                                    ) : (
+                                        <div className="no-items-message">
+                                            <h5>No items are available as this is a new restaurant.</h5>
+                                        </div>
+                                    )}
                                 </Row>
                             </Col>
+
+
                         </>
                     ) : (
                         <Col md={12}>
